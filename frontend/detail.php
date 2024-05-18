@@ -8,6 +8,7 @@ include_once "../backend/author_class.php";
 $article = new article;
 if (isset($_GET['baiviet_id']) && $_GET['baiviet_id'] != NULL) {
     $article_id = $_GET['baiviet_id'];
+    $article_view = $article->article_view($article_id);
 }
 ?>
 <style>

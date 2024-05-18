@@ -85,6 +85,7 @@ $result_total_article = $total_article->fetch_assoc();
                     <th>Nội dung</th>
                     <th>Tác giả</th>
                     <th>Ngày đăng</th>
+                    <th>View</th>
                     <th>Thao tác</th>
                 </tr>
             </thead>
@@ -108,7 +109,8 @@ $result_total_article = $total_article->fetch_assoc();
                             </td>
                             <td><?php echo substr($result['content'], 0, 100) . (strlen($result['content']) > 100 ? "..." : ""); ?></td>
                             <td><?php echo $result['author_name']; ?></td>
-                            <td><?php echo date('d-m-Y', strtotime($result['Ngaytao'])); ?></td>
+                            <td><?php echo date('d/m/Y', strtotime($result['Ngaytao'])); ?></td>
+                            <td><?php echo $result['luotxem']; ?></td>
                             <td>
                                 <a href="article_update.php?baiviet_id=<?php echo $result['baiviet_id']; ?>" class="btn btn-update">
                                     <i class=" fa-solid fa-pen-to-square"></i>

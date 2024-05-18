@@ -124,5 +124,12 @@ class article
         $result = $this->db->select($query);
         return $result;
     }
+    public function article_view($article_id)
+    {
+        $query = "UPDATE baiviet SET luotxem = luotxem+1
+        WHERE baiviet_id= '$article_id'";
+        $result = $this->db->update($query);
+        return $result;
+    }
 }
 ?>
