@@ -1,0 +1,50 @@
+.my-form .form-control {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #0272a4;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.my-form select.form-control {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.my-form .btn-primary {
+  background-color: #0272a4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 50%;
+}
+
+.my-form .btn-primary:hover {
+  background-color: #026391;
+}
+.my-form .dialog {
+  display: none;
+}
+.select_category,
+.select_author {
+  width: 100%; 
+  padding: 10px; 
+  font-size: 16px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  background-color: #f8f8f8; 
+}
+
+.select_category:hover,
+.select_author:hover {
+  border-color: #999; 
+}
+
+
+.select_category:focus,
+.select_author:focus {
+  outline: none; 
+  border-color: #333; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}

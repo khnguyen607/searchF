@@ -1,0 +1,151 @@
+/* Reset default styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header ul {
+    list-style-type: none;
+    margin: 0!important;
+    padding: 0;
+    overflow: hidden;
+}
+
+header li {
+    float: left;
+}
+
+header,
+.pagination-container li a {
+    display: block;
+    color: #2e4ead;
+    text-align: center;
+    margin-top: 4px;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+header li a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+.navbar {
+    background-color: #2e4ead;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.blog-box-title {
+    text-align: center;
+    text-transform: uppercase;
+    border-top: 2px #333 solid;
+}
+
+.blog-box-title h2 {
+    margin-top: 2px;
+    font-size: 18px;
+    border-bottom: 3px #333 solid;
+    border-top: 1px #333 solid;
+    padding: 10px 0;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+}
+
+.tag-cloud a {
+    display: inline-block;
+    padding: 3px 10px;
+    border: #999 1px solid;
+    color: #999;
+    margin-bottom: 3px;
+}
+
+
+/* comment */
+
+.comment {
+    margin-bottom: 20px;
+}
+
+.reply {
+    margin-left: 30px;
+}
+
+.comment-card {
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+}
+
+.reply-card {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.comment-input {
+    margin-top: 20px;
+}
+
+.sub-menu {
+    color: #eee;
+    background-color: #1e3270dd;
+    position: absolute;
+    right: 3rem;
+    width: 30vh;
+    height: 20vh;
+    margin-top: 3px;
+}
+
+.sub-menu li {
+    margin: 1rem 1rem;
+    list-style: none;
+}
+
+#img-user:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-menu ul li {
+    padding: 5px 0;
+}
+
+.sub-menu ul li strong {
+    font-weight: bold;
+}
