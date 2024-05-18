@@ -21,12 +21,9 @@ async function _search(keyword) {
             GROUP BY baiviet.baiviet_id`
     )
 
-    var promises = items.map(async item => {
-        var check = await filterByTag(item.tags);
-        return { item, check };
-    });
+    var promises = items.map(item => filterByTag(item.tags));
     let results = await Promise.all(promises);
-    var filteredItems = results.filter(result => result.check).map(result => result.item);
+    var filteredItems = items.filter((item, index) => results[index])
     
     var latestPosts = [...filteredItems].sort((a, b) => b.baiviet_id - a.baiviet_id)
     var mostViewedPosts = [...filteredItems].sort((a, b) => b.luotxem - a.luotxem)
@@ -73,14 +70,12 @@ async function _showTags() {
 }
 
 async function filterByTag(tagsList) {
-    if(!tagsList) return true
-    var tagsSelected = Array.from(document.querySelectorAll("#_tabsList input:checked")).map(tag => tag.getAttribute('data-tagName'))
-    if (tagsSelected.length == 0) return true 
-    tagsSelected.forEach(tag => {
-        if(tagsList.includes(tag)) return true
-    })
-    return false
+    var tagsSelected = Array.from(document.querySelectorAll("#_tabsList input:checked")).map(tag => tag.getAttribute('data-tagName'));
+    if (tagsSelected.length === 0) return true; 
+    if (tagsList === null) return false;
+    return tagsSelected.some(tag => tagsList.includes(tag));
 }
+
 
 class Helper {
     // Tương tác dataBase
